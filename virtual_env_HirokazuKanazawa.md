@@ -64,7 +64,7 @@ $ sudo yum -y install epel-release wget
 ```
 $ sudo wget http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
 ```  
-上記のURLを指定し  
+上記のURLからパッケージをダウンロードし
 ```
 $ sudo rpm -Uvh remi-release-7.rpm
 ```  
@@ -76,7 +76,7 @@ $ sudo yum -y install --enablerepo=remi-php73 php php-pdo php-mysqlnd php-mbstri
 ```
 $ php -v
 ```  
-でバージョン確認とインストールが成功しているかを確認します  
+でバージョンがphp7.3と表示されていればインストールが成功しています。  
  
 ***
 ### Nginxのインストール  
@@ -129,7 +129,7 @@ $ sudo cat /var/log/mysqld.log | grep 'temporary password'
 ```  
 でmysqld.log内からtemporary passwordの文字列が一致するファイルを見つけて出力します。  
  
-返り値の**root@localhost: XY**　の**XY**の箇所にランダムの文字列がMySQLのパスワードになるのでメモします  
+返り値のroot@localhost: **XY** の**XY**の箇所に存在するランダムの文字列がMySQLのパスワードになるのでメモします  
  
 ```
 $ sudo systemctl start mysqld
@@ -154,7 +154,7 @@ mysql > exit
 でMySQLを終了  
  
 ***
-### Larvelインストール  
+### Laravelインストール  
 vagrantディレクトリ内で  
 ```
 composer create-project laravel/laravel --prefer-dist laravel_app 6
@@ -163,7 +163,7 @@ composer create-project laravel/laravel --prefer-dist laravel_app 6
 vagrantディレクトリ内でPWDを入力しインストールされたか確認します。  
 VSコードでvagrant_Laravelディレクトリ内にあるlaravel_appを開き.envを開き  
 
-**DB＿PASSWORDにMySQLのパスワードを入力**  
+**DB_PASSWORDにMySQLのパスワードを入力**  
 **DB_DATABASEがlaravel-appになっているか**  
  
 以上を入力確認します。  
@@ -266,7 +266,7 @@ $ sodo chmod -R 777 storage/framework/sessions
   
 [laravel 6 認証](https://readouble.com/laravel/6.x/ja/authentication.html)  
  
- [Qiita Markdown 書き方 まとめ](https://qiita.com/shizuma/items/8616bbe3ebe8ab0b6ca1)  
+[Qiita Markdown 書き方 まとめ](https://qiita.com/shizuma/items/8616bbe3ebe8ab0b6ca1)  
   
 [Server Lesson](https://giztech.gizumo-inc.work/lesson/18)  
  
